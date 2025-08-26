@@ -7,8 +7,10 @@
 }
 
 body {
-    font-family: 'Poppins', verdana;
-    background-color: #161638;
+  font-family: 'Montserrat', sans-serif;
+    /* background-color: #161638; */
+  background: linear-gradient(145deg, #000000, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
     overflow-x: hidden;
     color: #fff;
     scroll-behavior: smooth;
@@ -17,9 +19,11 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
+    /* font-family: 'Montserrat', sans-serif; */
+      font-family: 'Orbitron', sans-serif;
+      
+      font-weight: 700;
+    }
 #naam{
     text-shadow: #ffffff5d 0px 0px 40px;
     font-size: 60px;
@@ -40,12 +44,12 @@ h3 {
 }
 
 .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     letter-spacing: 1px;
 }
 
 .nav-link {
+    font-family: 'Orbitron', sans-serif;
     font-weight: 500;
     margin-left: 15px;
     transition: color 0.3s, transform 0.2s;
@@ -70,7 +74,6 @@ h3 {
     color: white;
     position: relative;
 }
-
 .hero::after {
     content: "";
     position: absolute;
@@ -80,16 +83,82 @@ h3 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
 }
-#container{
-    background-color: #ffffff2f;
-    padding: 25px;
-    border-radius: 14px;
+#farm {
+  background: rgba(255, 255, 255, 0.1); /* transparent glass look */
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #fff; /* text white */
 }
+
+/* Labels */
+#farm .form-label {
+  color: #fff;
+}
+
+/* Inputs */
+#farm .form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+#farm .form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  box-shadow: 0 0 0 2px #00bfa5;
+  color: #fff;
+}
+
+/* Placeholder white */
+#farm ::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Button */
+#farm .btn-custom {
+  background: linear-gradient(135deg, #00bfa5, #00796b);
+  background-size: 200% 200%;   /* gradient ko bada karna */
+  background-position: left center;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.5s ease;   /* smoothness */
+}
+
+#farm .btn-custom:hover {
+  transform: scale(1.05);
+  background-position: right center; /* hover pe gradient shift */
+}
+
+
+/* Social buttons glass style */
+#farm .btn-outline-dark {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+#farm .btn-outline-dark:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 #skill{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 8px;
+    
+}
+#container{
+    border-radius: 14px;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+
 }
 .hero-content {
     position: relative;
@@ -104,16 +173,20 @@ h3 {
 .portfolio img:hover {
     transform: scale(1.05);
 }
-#farm{
+#farm {
     color: white;
-    background-color: #ffffff05;
+    background-color: #ffffff1f;
+    
 }
-input placeholder{
-    color: white;
+::placeholder{
+    color: white !important;
+    opacity: 1;
+    font-family: 'Poppins', verdana;
 }
 .form-control{
+    font-family: 'Poppins', verdana;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     background-color: transparent;
 }
 .btn-custom {
