@@ -9,19 +9,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
     /* background-color: #161638; */
-  background: linear-gradient(145deg, #000000, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(145deg, #0d0d0d, #000000, #0f2027, #203a43, #2c5364);
   min-height: 100vh;
     overflow-x: hidden;
     color: #fff;
     scroll-behavior: smooth;
 }
-
 h1,
 h2,
 h3 {
     /* font-family: 'Montserrat', sans-serif; */
       font-family: 'Orbitron', sans-serif;
-      
       font-weight: 700;
     }
 #naam{
@@ -65,15 +63,15 @@ h3 {
 }
 
 .hero {
-    height: 100vh;
-    background: url('img/hallway-2228277_1920.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
+
 .hero::after {
     content: "";
     position: absolute;
@@ -84,21 +82,19 @@ h3 {
     background: rgba(0, 0, 0, 0.6);
 }
 #farm {
-  background: rgba(255, 255, 255, 0.1); /* transparent glass look */
+  background: rgba(255, 255, 255, 0.1); 
   border-radius: 20px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  color: #fff; /* text white */
+  color: #fff; 
 }
 
-/* Labels */
 #farm .form-label {
   color: #fff;
 }
 
-/* Inputs */
 #farm .form-control {
   background: rgba(255, 255, 255, 0.15);
   border: none;
@@ -112,7 +108,6 @@ h3 {
   color: #fff;
 }
 
-/* Placeholder white */
 #farm ::placeholder {
   color: #fff;
   opacity: 0.8;
@@ -121,22 +116,21 @@ h3 {
 /* Button */
 #farm .btn-custom {
   background: linear-gradient(135deg, #00bfa5, #00796b);
-  background-size: 200% 200%;   /* gradient ko bada karna */
+  background-size: 200% 200%;   
   background-position: left center;
   border: none;
   color: #fff;
   font-weight: bold;
   border-radius: 30px;
-  transition: all 0.5s ease;   /* smoothness */
+  transition: all 0.5s ease;   
 }
 
 #farm .btn-custom:hover {
   transform: scale(1.05);
-  background-position: right center; /* hover pe gradient shift */
+  background-position: right center; 
 }
 
 
-/* Social buttons glass style */
 #farm .btn-outline-dark {
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: #fff;
@@ -161,10 +155,23 @@ h3 {
 
 }
 .hero-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 0 15px;
 }
-
+#bg-video {
+  position: absolute;
+  top: -10;
+  left: 0;
+  min-width: 100%;   /* jitni bhi screen ho cover kare */
+  min-height: 100%;  /* height bhi hamesha cover kare */
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(80%);
+}
 .portfolio img {
     border-radius: 12px;
     transition: 0.3s;
@@ -222,7 +229,6 @@ h3 {
   transform: scale(1.1);
 }
 
-/* Mobile Adjustments */
 @media (max-width: 767px) {
     #skill{
         flex-direction: column;
@@ -233,4 +239,5 @@ h3 {
   .social-icons a {
     margin-right: 10px;
   }
+
 }
