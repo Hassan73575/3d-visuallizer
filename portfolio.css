@@ -163,11 +163,9 @@ h3 {
 #bg-video {
   position: absolute;
   top: -10;
-  left: 0;
-  min-width: 100%;   /* jitni bhi screen ho cover kare */
-  min-height: 100%;  /* height bhi hamesha cover kare */
-  width: auto;
-  height: auto;
+  left: 0; 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
   filter: brightness(80%);
@@ -228,6 +226,35 @@ h3 {
   color: #00bfa5;
   transform: scale(1.1);
 }
+
+.container img {
+  width: 250px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.container img:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
 
 @media (max-width: 767px) {
     #skill{
